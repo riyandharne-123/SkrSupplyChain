@@ -271,7 +271,7 @@ h1, h2, h3, h4, h5,
   position: absolute;
   width: 100%; }
   .site-navbar.transparent {
-    background: transparent; }
+    background-color: #fff; }
   .site-navbar.absolute {
     position: absolute;
     top: 0;
