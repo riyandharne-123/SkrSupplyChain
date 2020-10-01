@@ -567,10 +567,13 @@
       </div>
       <div class="row">
         <div class="col-md-10 mb-5" style="margin: 0 auto;">
-
+<div class="container">
+<button class="btn btn-primary py-2 px-4 text-white" id="quote_button" onclick="quote()">Request A Quote</button>
+<button class="btn py-2 px-4 text-white" id="callback_button" onclick="callback()">Request A Callback</button>
+</div>
           <hr>
 
-          <form  class="p-5 bg-white">
+          <form  class="p-5 bg-white" id="req_quote">
 
             <div class="row form-group">
               
@@ -602,7 +605,50 @@
             <div class="row form-group">
               <div class="col-md-12">
                 <input type="submit"
-                 value="Send Message" 
+                 value="Request A Quote" 
+                 class="btn btn-primary py-2 px-4 text-white"
+                 >
+              </div>
+            </div>
+
+
+          </form>
+
+          <!--callback-->
+            
+          <form  class="p-5 bg-white" id="req_callback" style="display: none;">
+
+            <div class="row form-group">
+              
+              <div class="col-md-12">
+                <label class="text-black" for="email">Email</label> 
+                <input type="email" id="contact-email" class="form-control">
+              </div>
+            </div>
+
+            <div class="row form-group">
+              
+              <div class="col-md-12">
+                <label class="text-black" for="subject">Subject</label> 
+                <input type="subject" id="contact-subject" class="form-control">
+              </div>
+            </div>
+
+            <div class="row form-group">
+              <div class="col-md-12">
+                <label class="text-black" for="mail-textarea">Message</label> 
+                <textarea name="mail-textarea" cols="30" rows="7"
+                 class="form-control"
+                 id="mail-textarea"
+                 >
+                </textarea>
+              </div>
+            </div>
+
+            <div class="row form-group">
+              <div class="col-md-12">
+                <input type="submit"
+                 value="Request A Callback" 
                  class="btn btn-primary py-2 px-4 text-white"
                  >
               </div>
@@ -685,6 +731,6 @@
   <script src="js/bootstrap-datepicker.min.js"></script>
   <script src="js/aos.js"></script>
   <script src="js/main.js"></script>
-    
+    <script src="js/form-changer.js"></script>
   </body>
 </html>
