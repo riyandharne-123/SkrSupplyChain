@@ -78,6 +78,7 @@ h1, h2, h3, h4, h5,
     .btn.btn-black:hover {
       color: #000;
       background-color: #fff; }
+      
 
 .line-height-1 {
   line-height: 1 !important; }
@@ -674,7 +675,7 @@ h1, h2, h3, h4, h5,
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(241, 104, 33, 0.8);
+    background:#1f4c7a;
     z-index: 2;
     height: 100%;
     width: 100%;
@@ -1306,7 +1307,7 @@ h1, h2, h3, h4, h5,
       font-style: italic; }
 
 .feature-3 {
-  background: #e0560e; }
+  background:#1f4c7a; }
 
 .border-primary {
   position: relative; }
@@ -1330,7 +1331,8 @@ h1, h2, h3, h4, h5,
     -ms-transform: translateX(0%);
     transform: translateX(0%); }
 
-.testimonial {
+
+    .testimonial {
   max-width: 800px;
   margin: 0 auto !important;
   text-align: center; }
