@@ -37,7 +37,7 @@ try {
     //Recipients
     $mail->setFrom('dharne.techsolutions@gmail.com', 'admin');
     $mail->setFrom($email, $name);
-    $mail->addAddress('riyandharne@gmail.com', 'Riyan Dharne');     // Add a recipient
+    $mail->addAddress('tina@skrsupplychain.com', 'Tina Dharne');     // Add a recipient
 
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML
@@ -47,5 +47,5 @@ try {
     $mail->send();
     header("Location: index.html#section-contact");
 } catch (Exception $e) {
-    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+  echo $mail->ErrorInfo;
 }
