@@ -562,21 +562,28 @@
             
             <div class="p-4 mb-3 bg-white">
               <p class="mb-0 font-weight-bold">Address</p>
-              <p class="mb-4">203 Fake St. Mountain View, San Francisco, California, USA</p>
+              <p class="mb-4">302, 9th main,HRBR Layout, 1st Block,Kalyan Nagar, Bangalore-560043</p>
 
               <p class="mb-0 font-weight-bold">Phone</p>
-              <p class="mb-4"><a href="#">+1 232 3235 324</a></p>
+              <p class="mb-4"><a href="#">+91-9590622822</a></p>
+
+              <p class="mb-0 font-weight-bold">Working Hours</p>
+              <p class="mb-4"><a href="#"> 8:00 a.m - 17:00 a.m</a></p>
 
               <p class="mb-0 font-weight-bold">Email Address</p>
-              <p class="mb-0"><a href="#">youremail@domain.com</a></p>
+              <p class="mb-0"><a href="#">operations@skrsupplychain.com</a></p>
 
             </div>
             
-            <div class="p-4 mb-3 bg-white">
-              <h3 class="h5 text-black mb-3">More Info</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa ad iure porro mollitia architecto hic consequuntur. Distinctio nisi perferendis dolore, ipsa consectetur? Fugiat quaerat eos qui, libero neque sed nulla.</p>
-              <p><a href="#" class="btn btn-primary px-4 py-2 text-white">Learn More</a></p>
+            <div class="p-4 mb-3 bg-white" style="width: auto;">
+          
+              <div class="col" style="text-align: center;">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1943.635583185477!2d77.64661777185664!3d13.018396195868924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17297c9fa70f%3A0x8ca33422dcb16e27!2s1st%2C%20302%2C%209th%20Main%20Rd%2C%20HRBR%20Layout%201st%20Block%2C%20HRBR%20Layout%2C%20Kalyan%20Nagar%2C%20Bengaluru%2C%20Karnataka%20560043!5e0!3m2!1sen!2sin!4v1601718339612!5m2!1sen!2sin" 
+               frameborder="0" style="border:0; width: max-content;
+                height: 250px;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
             </div>
+         
+          </div>
 
           </div>
         </div>
@@ -597,34 +604,271 @@
 <button class="btn py-2 px-4 text-white" id="callback_button" onclick="callback()">Request A Callback</button>
 </div>
           <hr>
-
-          <form  class="p-5 bg-white" id="req_quote">
-
-            <div class="row form-group">
-              
-              <div class="col-md-12">
-                <label class="text-black" for="email">Email</label> 
-                <input type="email" id="contact-email" class="form-control">
-              </div>
-            </div>
+<!--quote-->
+          <form  class="p-5 bg-white" id="req_quote" method="POST" action="quote_mail.php">
+            <h2 class="font-weight-light text-primary">Basic Information</h2>
+           <hr>
 
             <div class="row form-group">
               
+              <div class="col-md-6">
+                <label class="text-black" >Name</label> 
+                <input 
+                type="text"
+                 id="quote-name"
+                 name="quote-name"
+                  class="form-control"
+                  required
+                  >
+              </div>
+              
+              <div class="col-md-6">
+                <label class="text-black">Company Name</label> 
+                <input 
+                type="text"
+                 id="quote-companyname"
+                 name="quote-companyname"
+                  class="form-control"
+                  required
+                  >
+              </div>
+            </div>
+            <div class="row form-group">
+              
+              <div class="col-md-6">
+                <label class="text-black" >Country code</label> 
+                <input 
+                type="number"
+                 id="quote-countrycode"
+                 name="quote-countrycode"
+                  class="form-control"
+                  required
+                  >
+              </div>
+              
+              <div class="col-md-6">
+                <label class="text-black">Telephone</label> 
+                <input 
+                type="number"
+                 id="quote-phonenumber"
+                 name="quote-phonenumber"
+                  class="form-control"
+                  required
+                  >
+              </div>
+            </div>
+            <div class="row form-group">
+              
               <div class="col-md-12">
-                <label class="text-black" for="subject">Subject</label> 
-                <input type="subject" id="contact-subject" class="form-control">
+                <label class="text-black">Email</label> 
+                <input 
+                type="email"
+                 id="quote-email"
+                 name="quote-email"
+                  class="form-control"
+                  required
+                  >
               </div>
             </div>
 
+            <h2 class="font-weight-light text-primary">Shipping Information</h2>
+            <hr>
+
             <div class="row form-group">
-              <div class="col-md-12">
-                <label class="text-black" for="mail-textarea">Message</label> 
-                <textarea name="mail-textarea" cols="30" rows="7"
+              
+              <div class="col-md-6">
+                <label class="text-black" >Shipment type</label> 
+                <select
+                 id="quote-shipmentType"
+                 name="quote-shipmentType"
                  class="form-control"
-                 id="mail-textarea"
+                 required
+                 >
+                  <option>null</option>
+                  <option>Air</option>
+                  <option>Road</option>
+                  <option>Ocean (Full container load)</option>
+                  <option>Ocean (Less than container load)</option>
+                </select>
+              </div>
+              
+              <div class="col-md-6">
+                <label class="text-black">Place of loading</label> 
+                <input 
+                type="text"
+                 id="quote-placeofloading"
+                 name="quote-placeofloading"
+                  class="form-control"
+                  required
+                  >
+              </div>
+            </div>
+
+            <div class="row form-group">
+              
+              <div class="col-md-6">
+                <label class="text-black" >Haz Details (Class and Number)</label> 
+                <input 
+                type="text"
+                 id="quote-hazdetails"
+                 name="quote-hazdetails"
+                  class="form-control"
+                  required
+                  >
+              </div>
+              
+              <div class="col-md-6">
+                <label class="text-black">Destination</label> 
+                <input 
+                type="text"
+                 id="quote-destination"
+                 name="quote-destination"
+                  class="form-control"
+                  required
+                  >
+              </div>
+            </div>
+
+            <hr>
+            <h4 class="font-weight-light text-primary">Cargo Specification</h4>
+
+            <div class="row form-group">
+              
+              <div class="col-md-3">
+                <label class="text-black" >Piece(s) </label> 
+                <input 
+                type="text"
+                 id="quote-peices"
+                 name="quote-peices"
+                  class="form-control"
+                  placeholder="1 - 9999"
+                  required
+                  >
+              </div>
+              
+              <div class="col-md-3">
+                <label class="text-black">Weight</label> 
+                <input 
+                type="text"
+                 id="quote-weight"
+                 name="quote-weight"
+                  class="form-control"
+                  placeholder="Kg"
+                  required
+                  >
+                </div>
+
+                <div class="col-md-6">
+                  <label class="text-black">Cubic meter</label> 
+                  <input 
+                  type="text"
+                   id="quote-cubicmeter"
+                   name="quote-cubicmeter"
+                    class="form-control"
+                    placeholder="cubic meters(m³) "
+                    required
+                    >
+                </div>
+
+            </div>
+
+            <hr>
+ 
+            
+            <div class="row form-group">
+
+              <div class="col-md-6">
+                <label class="text-black" >Container Size (FCL)</label> 
+                <select
+                 id="quote-containersize"
+                 name="quote-containersize"
+                 class="form-control"
+                 required
+                 >
+                  <option>null</option>
+                  <option>20 ft Container</option>
+                  <option>40 ft Container</option>
+                  <option>45 ft Container</option>
+                  <option>Less then container load</option>
+                  <option>not applicable</option>
+
+                </select>
+              </div>
+              
+              <div class="col-md-6">
+                <label class="text-black">Number of containers</label> 
+                <input 
+                type="nubmer"
+                 id="quote-numberofcontainers"
+                 name="quote-numberofcontainers"
+                  class="form-control"
+                  required
+                  >
+              </div>
+              
+            </div>
+
+              
+            <div class="row form-group">
+              
+              <div class="col-md-12">
+                <label class="text-black">Date order will be ready</label> 
+                <input 
+                type="date"
+                 id="quote-dateofOrder"
+                 name="quote-dateofOrder"
+                  class="form-control"
+                  required
+                  >
+              </div>
+              
+            </div>
+
+            <hr>
+            <h4 class="font-weight-light text-primary">Additional Information</h4>
+            <hr>
+
+            <div class="row form-group">
+              <div class="col-md-12">
+                <label class="text-black">Additional Information</label> 
+                <textarea 
+                name="quote-additionalInformation" 
+                id="quote-additionalInformation"
+                cols="30" rows="7"
+                 class="form-control"
                  >
                 </textarea>
               </div>
+            </div>
+
+            <div class="row form-group">
+              <div class="col-md-6">
+                <label class="text-black">Firm Order</label> 
+                <select
+                 id="quote-firmorder"
+                 name="quote-firmorder"
+                 class="form-control"
+                 required
+                 >
+                  <option>Yes</option>
+                  <option>No</option>
+                </select>
+              
+              </div>
+
+              <div class="col-md-6">
+                <label class="text-black">Preferred method of contact</label> 
+                <select
+                 id="quote-contactmethod"
+                 name="quote-contactmethod"
+                 class="form-control"
+                 required
+                 >
+                  <option>tel</option>
+                  <option>email</option>
+                </select>
+              </div>
+
             </div>
 
             <div class="row form-group">
@@ -694,16 +938,17 @@
             <div class="row">
               <div class="col-md-5 mr-auto">
                 <h2 class="footer-heading mb-4">About Us</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam iure deserunt ut architecto dolores quo beatae laborum aliquam ipsam rem impedit obcaecati ea consequatur.</p>
+                <p>
+                 We have been continuously challenging the status quo by bringing forth innovative logistics solutions that have contributed to economies and transformed the lives of millions.
+                </p>
               </div>
               
               <div class="col-md-3">
                 <h2 class="footer-heading mb-4">Quick Links</h2>
                 <ul class="list-unstyled">
-                  <li><a href="#">About Us</a></li>
-                  <li><a href="#">Services</a></li>
-                  <li><a href="#">Testimonials</a></li>
-                  <li><a href="#">Contact Us</a></li>
+                  <li><a href="#section-about">About Us</a></li>
+                  <li><a href="#section-services">Services</a></li>
+                  <li><a href="#section-contact">Contact Us</a></li>
                 </ul>
               </div>
               <div class="col-md-3">
@@ -715,24 +960,13 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3">
-            <h2 class="footer-heading mb-4">Subscribe Newsletter</h2>
-            <form action="#" method="post">
-              <div class="input-group mb-3">
-                <input type="text" class="form-control border-secondary text-white bg-transparent" placeholder="Enter Email" aria-label="Enter Email" aria-describedby="button-addon2">
-                <div class="input-group-append">
-                  <button class="btn btn-primary text-white" type="button" id="button-addon2">Send</button>
-                </div>
-              </div>
-            </form>
-          </div>
         </div>
         <div class="row pt-5 mt-5 text-center">
           <div class="col-md-12">
             <div class="border-top pt-5">
               <p>
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | SKR Supply Chain
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             </p>
             </div>
@@ -759,6 +993,8 @@
     <script src="js/form-changer.js"></script>
     <script>
       tinymce.init({selector:'#contact-message'});
+      
+      tinymce.init({selector:'#quote-additionalInformation'});
     </script>
   </body>
 </html>
