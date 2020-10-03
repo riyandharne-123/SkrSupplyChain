@@ -1,4 +1,3 @@
-
   <?php
 // Import PHPMailer classes into the global namespace
 // These must be at the top of your script, not inside a function
@@ -49,7 +48,82 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $additional_information = $_POST["quote-additionalInformation"];
     $firm_order = $_POST["quote-firmorder"];
     $method_of_contact = $_POST["quote-contactmethod"];
-    $message = "";
+    $message = "
+    <table border='1'>
+    <tr>
+      <td>Contact Name</td>
+      <td>".$name."</td> 
+    </tr>
+        <tr>
+        <td>Company Name</td>
+        <td>".$comapny_name."</td> 
+    </tr>
+  <tr>
+      <td>Country Code</td>
+      <td>".$country_code."</td> 
+    </tr>
+    <tr>
+      <td>Telephone</td>
+      <td>".$telephone."</td> 
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td>".$email."</td> 
+    </tr>
+    <tr>
+      <td>Shipment Type</td>
+      <td>".$shipment_type."</td> 
+    </tr>
+    <tr>
+      <td>Place of Loading</td>
+      <td>".$place_of_loading."</td> 
+    </tr>
+    <tr>
+      <td>haz details</td>
+      <td>".$place_of_loading."</td> 
+    </tr>
+    <tr>
+      <td>Destination</td>
+      <td>".$destination."</td> 
+    </tr>
+    <tr>
+      <td>Peices</td>
+      <td>".$pieces."</td> 
+    </tr>
+    <tr>
+      <td>Weight</td>
+      <td>".$weight."</td> 
+    </tr>
+    <tr>
+      <td>Cubic Meter</td>
+      <td>".$cubic_meter."</td> 
+    </tr>
+    <tr>
+      <td>Container Size</td>
+      <td>".$container_size."</td> 
+    </tr>
+    <tr>
+      <td>Number of containers</td>
+      <td>".$number_of_containers."</td> 
+    </tr>
+    <tr>
+      <td>Date of order</td>
+      <td>".$date_of_order."</td> 
+    </tr>
+    <tr>
+      <td>Additional Information</td>
+      <td>".$additional_information."</td> 
+    </tr>
+    <tr>
+      <td>Firm Order</td>
+      <td>".$firm_order."</td> 
+    </tr>
+    <tr>
+    <td>Method of Contact</td>
+    <td>".$method_of_contact."</td> 
+  </tr>
+  </table>
+  ";
 }
 
 // Instantiation and passing `true` enables exceptions
@@ -77,9 +151,9 @@ try {
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = 'Quotation';
     $mail->Body    = $message;
-
-    $mail->send();
     header("Location: index.html#section-quote");
+    $mail->send();
+
 } catch (Exception $e) {
   echo $mail->ErrorInfo;
 }
