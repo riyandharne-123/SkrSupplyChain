@@ -10,13 +10,46 @@ use PHPMailer\PHPMailer\Exception;
 require 'vendor/autoload.php';
 
 // define variables and set to empty values
-$name = $email = $subject = $message = "";
+$name = "";
+$comapny_name = "";
+$country_code = "";
+$telephone = "";
+$email = "";
+$shipment_type = "";
+$place_of_loading = "";
+$haz_details = "";
+$destination = "";
+$pieces = "";
+$weight = "";
+$cubic_meter = "";
+$container_size = "";
+$number_of_containers = "";
+$date_of_order = "";
+$additional_information = "";
+$firm_order = "";
+$method_of_contact = "";
+$message = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $name = $_POST["contact-name"];
-  $email = $_POST["contact-email"];
-  $subject = $_POST["contact-subject"];
-  $message = $_POST["contact-message"];
+  $name = $_POST["quote-name"];
+    $comapny_name = $_POST["quote-companyname"];
+    $country_code =  $_POST["quote-countrycode"];
+    $telephone =  $_POST["quote-phonenumber"];
+    $email =  $_POST["quote-email"];
+    $shipment_type = $_POST["quote-shipmentType"];
+    $place_of_loading = $_POST["quote-placeofloading"];
+    $haz_details = $_POST["quote-hazdetails"];
+    $destination = $_POST["quote-destination"];
+    $pieces = $_POST["quote-peices"];
+    $weight = $_POST["quote-weight"];
+    $cubic_meter = $_POST["quote-cubicmeter"];
+    $container_size = $_POST["quote-containersize"];
+    $number_of_containers = $_POST["quote-numberofcontainers"];
+    $date_of_order = $_POST["quote-dateofOrder"];
+    $additional_information = $_POST["quote-additionalInformation"];
+    $firm_order = $_POST["quote-firmorder"];
+    $method_of_contact = $_POST["quote-contactmethod"];
+    $message = "";
 }
 
 // Instantiation and passing `true` enables exceptions
@@ -37,11 +70,12 @@ try {
     //Recipients
     $mail->setFrom('dharne.techsolutions@gmail.com', 'admin');
     $mail->setFrom($email, $name);
-    $mail->addAddress('tina@skrsupplychain.com', 'Tina Dharne');     // Add a recipient
+    $mail->addAddress('riyandharne@gmail.com', 'Riyan Dharne'); 
+   // $mail->addAddress('tina@skrsupplychain.com', 'Tina Dharne');     // Add a recipient
 
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML
-    $mail->Subject = $subject;
+    $mail->Subject = 'Quotation';
     $mail->Body    = $message;
 
     $mail->send();
