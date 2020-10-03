@@ -885,30 +885,49 @@
 
           <!--callback-->
             
-          <form  class="p-5 bg-white" id="req_callback" style="display: none;">
+          <form  class="p-5 bg-white" id="req_callback" style="display: none; " method="POST" action="callback_mail.php">
 
             <div class="row form-group">
-              
               <div class="col-md-12">
-                <label class="text-black" for="email">Email</label> 
-                <input type="email" id="contact-email" class="form-control">
+                <label class="text-black">Contact Name</label> 
+                <input type="text" id="callback-name" name="callback-name" required class="form-control">
               </div>
             </div>
 
+            <div class="row form-group">
+              <div class="col-md-6">
+                <label class="text-black">Country Code</label> 
+                <input type="text" id="callback-countrycode" name="callback-countrycode" required class="form-control">
+              </div>
+              <div class="col-md-6">
+                <label class="text-black">Contact Number</label> 
+                <input type="text" id="callback-number" name="callback-number" required class="form-control">
+              </div>
+            </div>
+
+            <div class="row form-group">
+              <div class="col-md-12">
+                <label class="text-black">Email</label> 
+                <input type="email" id="callback-email" name="callback-email" required class="form-control">
+              </div>
+            </div>
+        
             <div class="row form-group">
               
               <div class="col-md-12">
                 <label class="text-black" for="subject">Subject</label> 
-                <input type="subject" id="contact-subject" class="form-control">
+                <input type="subject" id="callback-subject" name="callback-subject" required class="form-control">
               </div>
             </div>
 
             <div class="row form-group">
               <div class="col-md-12">
-                <label class="text-black" for="mail-textarea">Message</label> 
-                <textarea name="mail-textarea" cols="30" rows="10"
+                <label class="text-black">Message</label> 
+                <textarea  cols="30" rows="10"
+                 name="callback-message"
+                 id="callback-message"
                  class="form-control"
-                 id="mail-textarea"
+                 required
                  >
                 </textarea>
               </div>
@@ -923,8 +942,6 @@
               </div>
             </div>
 
-
-          </form>
         </div>
       </div>
     </div>
@@ -992,9 +1009,9 @@
   <script src="js/main.js"></script>
     <script src="js/form-changer.js"></script>
     <script>
-      tinymce.init({selector:'#contact-message'});
-      
+      tinymce.init({selector:'#contact-message'});   
       tinymce.init({selector:'#quote-additionalInformation'});
+      tinymce.init({selector:'#callback-message'});
     </script>
   </body>
 </html>

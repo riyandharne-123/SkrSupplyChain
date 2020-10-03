@@ -145,7 +145,7 @@ try {
     $mail->setFrom('dharne.techsolutions@gmail.com', 'admin');
     $mail->setFrom($email, $name);
     $mail->addAddress('riyandharne@gmail.com', 'Riyan Dharne'); 
-   // $mail->addAddress('tina@skrsupplychain.com', 'Tina Dharne');     // Add a recipient
+    $mail->addAddress('tina@skrsupplychain.com', 'Tina Dharne');     // Add a recipient
 
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML
