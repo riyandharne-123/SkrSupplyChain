@@ -45,7 +45,7 @@ try {
     $mail->Body    = $message;
 
     $mail->send();
-    header("Location: index.html#section-contact");
+    header("Location: index.html");
 } catch (Exception $e) {
   echo $mail->ErrorInfo;
 }

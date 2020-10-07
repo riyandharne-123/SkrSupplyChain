@@ -151,7 +151,7 @@ try {
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = 'Quotation';
     $mail->Body    = $message;
-    header("Location: index.html#section-quote");
+    header("Location: index.html");
     $mail->send();
 
 } catch (Exception $e) {

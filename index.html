@@ -148,308 +148,294 @@
     </header>
     <!-- // Header  -->
 
-
-
-    <!-- Search  -->
-    <div id="search">
-        <button type="button" class="close">×</button>
-        <form class="clearfix d-block">
-            <input type="search" value="" placeholder="Search for . . . ." />
-            <button type="submit" class="btn btn-primary">Search</button>
-        </form>
-    </div>
-    <!-- // Search  -->
-
-
-    <!-- Get A Quote  -->
-    <div class="modal contact-modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content margin-top-150px ">
-                <div class="row no-gutters">
-      
-                    <div class="col">
-                        <div class="padding-30px">
-                            <h3 class="padding-bottom-15px">Get A Free Quote</h3>
-                            <form action="quote_mail.php" method="POST">
-                                <div class="row form-group">
-              
-                                    <div class="col-md-6">
-                                      <label class="text-black" >Name</label> 
-                                      <input 
-                                      type="text"
-                                       id="quote-name"
-                                       name="quote-name"
-                                        class="form-control"
-                                        required
-                                        >
-                                    </div>
-                                    
-                                    <div class="col-md-6">
-                                      <label class="text-black">Company Name</label> 
-                                      <input 
-                                      type="text"
-                                       id="quote-companyname"
-                                       name="quote-companyname"
-                                        class="form-control"
-                                        required
-                                        >
-                                    </div>
-                                  </div>
-                                  <div class="row form-group">
-                                    
-                                    <div class="col-md-6">
-                                      <label class="text-black" >Country code</label> 
-                                      <input 
-                                      type="number"
-                                       id="quote-countrycode"
-                                       name="quote-countrycode"
-                                        class="form-control"
-                                        required
-                                        >
-                                    </div>
-                                    
-                                    <div class="col-md-6">
-                                      <label class="text-black">Telephone</label> 
-                                      <input 
-                                      type="number"
-                                       id="quote-phonenumber"
-                                       name="quote-phonenumber"
-                                        class="form-control"
-                                        required
-                                        >
-                                    </div>
-                                  </div>
-                                  <div class="row form-group">
-                                    
-                                    <div class="col-md-12">
-                                      <label class="text-black">Email</label> 
-                                      <input 
-                                      type="email"
-                                       id="quote-email"
-                                       name="quote-email"
-                                        class="form-control"
-                                        required
-                                        >
-                                    </div>
-                                  </div>
-                      
-                                  <h2 class="font-weight-light text-primary">Shipping Information</h2>
-                                  <hr>
-                      
-                                  <div class="row form-group">
-                                    
-                                    <div class="col-md-6">
-                                      <label class="text-black" >Shipment type</label> 
-                                      <select
-                                       id="quote-shipmentType"
-                                       name="quote-shipmentType"
-                                       class="form-control"
-                                       required
-                                       >
-                                        <option>null</option>
-                                        <option>Air</option>
-                                        <option>Road</option>
-                                        <option>Ocean (Full container load)</option>
-                                        <option>Ocean (Less than container load)</option>
-                                      </select>
-                                    </div>
-                                    
-                                    <div class="col-md-6">
-                                      <label class="text-black">Place of loading</label> 
-                                      <input 
-                                      type="text"
-                                       id="quote-placeofloading"
-                                       name="quote-placeofloading"
-                                        class="form-control"
-                                        required
-                                        >
-                                    </div>
-                                  </div>
-                      
-                                  <div class="row form-group">
-                                    
-                                    <div class="col-md-6">
-                                      <label class="text-black" >Haz Details (Class and Number)</label> 
-                                      <input 
-                                      type="text"
-                                       id="quote-hazdetails"
-                                       name="quote-hazdetails"
-                                        class="form-control"
-                                        required
-                                        >
-                                    </div>
-                                    
-                                    <div class="col-md-6">
-                                      <label class="text-black">Destination</label> 
-                                      <input 
-                                      type="text"
-                                       id="quote-destination"
-                                       name="quote-destination"
-                                        class="form-control"
-                                        required
-                                        >
-                                    </div>
-                                  </div>
-                      
-                                  <hr>
-                                  <h4 class="font-weight-light text-primary">Cargo Specification</h4>
-                      
-                                  <div class="row form-group">
-                                    
-                                    <div class="col-md-3">
-                                      <label class="text-black" >Piece(s) </label> 
-                                      <input 
-                                      type="text"
-                                       id="quote-peices"
-                                       name="quote-peices"
-                                        class="form-control"
-                                        placeholder="1 - 9999"
-                                        required
-                                        >
-                                    </div>
-                                    
-                                    <div class="col-md-3">
-                                      <label class="text-black">Weight</label> 
-                                      <input 
-                                      type="text"
-                                       id="quote-weight"
-                                       name="quote-weight"
-                                        class="form-control"
-                                        placeholder="Kg"
-                                        required
-                                        >
-                                      </div>
-                      
-                                      <div class="col-md-6">
-                                        <label class="text-black">Cubic meter</label> 
-                                        <input 
-                                        type="text"
-                                         id="quote-cubicmeter"
-                                         name="quote-cubicmeter"
-                                          class="form-control"
-                                          placeholder="cubic meters(m³) "
-                                          required
-                                          >
-                                      </div>
-                      
-                                  </div>
-                      
-                                  <hr>
-                       
-                                  
-                                  <div class="row form-group">
-                      
-                                    <div class="col-md-6">
-                                      <label class="text-black" >Container Size (FCL)</label> 
-                                      <select
-                                       id="quote-containersize"
-                                       name="quote-containersize"
-                                       class="form-control"
-                                       required
-                                       >
-                                        <option>null</option>
-                                        <option>20 ft Container</option>
-                                        <option>40 ft Container</option>
-                                        <option>45 ft Container</option>
-                                        <option>Less then container load</option>
-                                        <option>not applicable</option>
-                      
-                                      </select>
-                                    </div>
-                                    
-                                    <div class="col-md-6">
-                                      <label class="text-black">Number of containers</label> 
-                                      <input 
-                                      type="nubmer"
-                                       id="quote-numberofcontainers"
-                                       name="quote-numberofcontainers"
-                                        class="form-control"
-                                        required
-                                        >
-                                    </div>
-                                    
-                                  </div>
-                      
-                                    
-                                  <div class="row form-group">
-                                    
-                                    <div class="col-md-12">
-                                      <label class="text-black">Date order will be ready</label> 
-                                      <input 
-                                      type="date"
-                                       id="quote-dateofOrder"
-                                       name="quote-dateofOrder"
-                                        class="form-control"
-                                        required
-                                        >
-                                    </div>
-                                    
-                                  </div>
-                      
-                                  <hr>
-                                  <h4 class="font-weight-light text-primary">Additional Information</h4>
-                                  <hr>
-                      
-                                  <div class="row form-group">
-                                    <div class="col-md-12">
-                                      <label class="text-black">Additional Information</label> 
-                                      <textarea 
-                                      name="quote-additionalInformation" 
-                                      id="quote-additionalInformation"
-                                      cols="30" rows="7"
-                                       class="form-control"
-                                       >
-                                      </textarea>
-                                    </div>
-                                  </div>
-                      
-                                  <div class="row form-group">
-                                    <div class="col-md-6">
-                                      <label class="text-black">Firm Order</label> 
-                                      <select
-                                       id="quote-firmorder"
-                                       name="quote-firmorder"
-                                       class="form-control"
-                                       required
-                                       >
-                                        <option>Yes</option>
-                                        <option>No</option>
-                                      </select>
-                                    
-                                    </div>
-                      
-                                    <div class="col-md-6">
-                                      <label class="text-black">Preferred method of contact</label> 
-                                      <select
-                                       id="quote-contactmethod"
-                                       name="quote-contactmethod"
-                                       class="form-control"
-                                       required
-                                       >
-                                        <option>tel</option>
-                                        <option>email</option>
-                                      </select>
-                                    </div>
-                      
-                                  </div>
-                      
-                                  <div class="row form-group">
-                                    <div class="col-md-12">
-                                      <input type="submit"
-                                       value="Request A Quote" 
-                                       class="btn btn-info btn-lg py-2 px-4 text-white"
-                                       >
-                                    </div>
-                                  </div>
-                      
-                            </form>
+  <!-- Get A Quote  -->
+  <div class="modal contact-modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content margin-top-150px ">
+            <div class="row no-gutters">
+                <div class="col">
+                    <div class="padding-30px">
+                        <h3 class="padding-bottom-15px">Get A Free Quote</h3>
+                   <form method="POST" action="./quote_mail.php">
+                    <div class="row form-group">
+          
+                        <div class="col-md-6">
+                          <label class="text-black" >Name</label> 
+                          <input 
+                          type="text"
+                           id="quote-name"
+                           name="quote-name"
+                            class="form-control"
+                            required
+                            >
                         </div>
+                        
+                        <div class="col-md-6">
+                          <label class="text-black">Company Name</label> 
+                          <input 
+                          type="text"
+                           id="quote-companyname"
+                           name="quote-companyname"
+                            class="form-control"
+                            required
+                            >
+                        </div>
+                      </div>
+                      <div class="row form-group">
+                        
+                        <div class="col-md-6">
+                          <label class="text-black" >Country code</label> 
+                          <input 
+                          type="number"
+                           id="quote-countrycode"
+                           name="quote-countrycode"
+                            class="form-control"
+                            required
+                            >
+                        </div>
+                        
+                        <div class="col-md-6">
+                          <label class="text-black">Telephone</label> 
+                          <input 
+                          type="number"
+                           id="quote-phonenumber"
+                           name="quote-phonenumber"
+                            class="form-control"
+                            required
+                            >
+                        </div>
+                      </div>
+                      <div class="row form-group">
+                        
+                        <div class="col-md-12">
+                          <label class="text-black">Email</label> 
+                          <input 
+                          type="email"
+                           id="quote-email"
+                           name="quote-email"
+                            class="form-control"
+                            required
+                            >
+                        </div>
+                      </div>
+          
+                      <h2 class="font-weight-light text-primary">Shipping Information</h2>
+                      <hr>
+          
+                      <div class="row form-group">
+                        
+                        <div class="col-md-6">
+                          <label class="text-black" >Shipment type</label> 
+                          <select
+                           id="quote-shipmentType"
+                           name="quote-shipmentType"
+                           class="form-control"
+                           required
+                           >
+                            <option>null</option>
+                            <option>Air</option>
+                            <option>Road</option>
+                            <option>Ocean (Full container load)</option>
+                            <option>Ocean (Less than container load)</option>
+                          </select>
+                        </div>
+                        
+                        <div class="col-md-6">
+                          <label class="text-black">Place of loading</label> 
+                          <input 
+                          type="text"
+                           id="quote-placeofloading"
+                           name="quote-placeofloading"
+                            class="form-control"
+                            required
+                            >
+                        </div>
+                      </div>
+          
+                      <div class="row form-group">
+                        
+                        <div class="col-md-6">
+                          <label class="text-black" >Haz Details (Class and Number)</label> 
+                          <input 
+                          type="text"
+                           id="quote-hazdetails"
+                           name="quote-hazdetails"
+                            class="form-control"
+                            required
+                            >
+                        </div>
+                        
+                        <div class="col-md-6">
+                          <label class="text-black">Destination</label> 
+                          <input 
+                          type="text"
+                           id="quote-destination"
+                           name="quote-destination"
+                            class="form-control"
+                            required
+                            >
+                        </div>
+                      </div>
+          
+                      <hr>
+                      <h4 class="font-weight-light text-primary">Cargo Specification</h4>
+          
+                      <div class="row form-group">
+                        
+                        <div class="col-md-3">
+                          <label class="text-black" >Piece(s) </label> 
+                          <input 
+                          type="text"
+                           id="quote-peices"
+                           name="quote-peices"
+                            class="form-control"
+                            placeholder="1 - 9999"
+                            required
+                            >
+                        </div>
+                        
+                        <div class="col-md-3">
+                          <label class="text-black">Weight</label> 
+                          <input 
+                          type="text"
+                           id="quote-weight"
+                           name="quote-weight"
+                            class="form-control"
+                            placeholder="Kg"
+                            required
+                            >
+                          </div>
+          
+                          <div class="col-md-6">
+                            <label class="text-black">Cubic meter</label> 
+                            <input 
+                            type="text"
+                             id="quote-cubicmeter"
+                             name="quote-cubicmeter"
+                              class="form-control"
+                              placeholder="cubic meters(m³) "
+                              required
+                              >
+                          </div>
+          
+                      </div>
+          
+                      <hr>
+           
+                      
+                      <div class="row form-group">
+          
+                        <div class="col-md-6">
+                          <label class="text-black" >Container Size (FCL)</label> 
+                          <select
+                           id="quote-containersize"
+                           name="quote-containersize"
+                           class="form-control"
+                           required
+                           >
+                            <option>null</option>
+                            <option>20 ft Container</option>
+                            <option>40 ft Container</option>
+                            <option>45 ft Container</option>
+                            <option>Less then container load</option>
+                            <option>not applicable</option>
+          
+                          </select>
+                        </div>
+                        
+                        <div class="col-md-6">
+                          <label class="text-black">Number of containers</label> 
+                          <input 
+                          type="nubmer"
+                           id="quote-numberofcontainers"
+                           name="quote-numberofcontainers"
+                            class="form-control"
+                            required
+                            >
+                        </div>
+                        
+                      </div>
+          
+                        
+                      <div class="row form-group">
+                        
+                        <div class="col-md-12">
+                          <label class="text-black">Date order will be ready</label> 
+                          <input 
+                          type="date"
+                           id="quote-dateofOrder"
+                           name="quote-dateofOrder"
+                            class="form-control"
+                            required
+                            >
+                        </div>
+                        
+                      </div>
+          
+                      <hr>
+                      <h4 class="font-weight-light text-primary">Additional Information</h4>
+                      <hr>
+          
+                      <div class="row form-group">
+                        <div class="col-md-12">
+                          <label class="text-black">Additional Information</label> 
+                          <textarea 
+                          name="quote-additionalInformation" 
+                          id="quote-additionalInformation"
+                          cols="30" rows="7"
+                           class="form-control"
+                           >
+                          </textarea>
+                        </div>
+                      </div>
+          
+                      <div class="row form-group">
+                        <div class="col-md-6">
+                          <label class="text-black">Firm Order</label> 
+                          <select
+                           id="quote-firmorder"
+                           name="quote-firmorder"
+                           class="form-control"
+                           required
+                           >
+                            <option>Yes</option>
+                            <option>No</option>
+                          </select>
+                        
+                        </div>
+          
+                        <div class="col-md-6">
+                          <label class="text-black">Preferred method of contact</label> 
+                          <select
+                           id="quote-contactmethod"
+                           name="quote-contactmethod"
+                           class="form-control"
+                           required
+                           >
+                            <option>tel</option>
+                            <option>email</option>
+                          </select>
+                        </div>
+          
+                      </div>
+          
+                      <div class="row form-group">
+                        <div class="col-md-12">
+                          <input 
+                          type="submit"
+                           value="Request A Quote" 
+                           class="btn btn-info btn-lg py-2 px-4 text-white"
+                           >
+                        </div>
+                      </div>
+                   </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- // Get A Quote  -->
+</div>
+<!-- // Get A Quote  -->
 
 
 
