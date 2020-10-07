@@ -1468,9 +1468,12 @@ a.action-bottom:hover {
 .call-action h2 {
   font-size: 27px;
 }
-.call-action.ba-1 {
-  background-image: url(../img/ba_call_action.jpg);
-  background-size: cover;
+.call-action.ba-about {
+  background-image: url(https://omnishipping.com.bd/images/b3.jpg);
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 .call-action.ba-2 {
   background-color: #444;
