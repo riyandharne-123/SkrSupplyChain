@@ -112,7 +112,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </tr>
     <tr>
       <td>Additional Information</td>
-      <td>".$additional_information."</td> 
+      <td><p>".$additional_information."</p></td> 
     </tr>
     <tr>
       <td>Firm Order</td>
