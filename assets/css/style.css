@@ -1475,6 +1475,63 @@ a.action-bottom:hover {
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
+.call-action.ba-sea {
+  background-image: url(https://www.johngood.co.uk/wp-content/uploads/2017/06/Sea-Freight-banner-image.jpg);
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.call-action.ba-air {
+  background-image: url(https://www.aircargonews.net/wp-content/uploads/pics/Lufthansa-Cargo-1024px.jpg);
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.call-action.ba-lcl {
+  background-image: url(https://logistik-aktuell.com/wp-content/uploads/sites/487/10119_0014_1900x600px-1.jpg);
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.call-action.ba-pc{
+  background-image: url(https://1.bp.blogspot.com/--vc_enr6TT8/WpESGxrAc0I/AAAAAAAAGgM/DaMBe5DWfss2dCapVAXz5ZkT5mCjb_sFwCLcBGAs/s1600/project-logistics.jpg);
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.call-action.ba-inland{
+  background-image: url(../../assets/img/ba_call_action.jpg);
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.call-action.ba-cargoi{
+  background-image: url(https://1lk.com.ua/uploads/thumb/669-1280-20190903_plk_hd_finish_00_02_44_23_still003.jpg);
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.call-action.ba-cl{
+  background-image: url(https://www.yusen-logistics.com/sites/all/themes/custom/ylk/images/global/img1.jpg);
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.call-action.ba-cb{
+  background-image: url(https://www.minervalogistics.in/images/customcomplaionces1.jpg);
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
 .call-action.ba-2 {
   background-color: #444;
 }
