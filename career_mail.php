@@ -16,7 +16,7 @@ $email = "";
 $message = "";
 $position = "";
 $location = "";
-
+$resume ="";
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -26,7 +26,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $postion = $_POST["career-position"];
   $location = $_POST["career-location"];
   $message = $_POST["career-message"];
+  $resume = $_POST["career-file"];
 }
+
+//file uploading
 
 $message = "
 <table border='1'>
@@ -55,6 +58,8 @@ $message = "
 <td>".$message."</td> 
 </tr>
 </table>
+<hr>
+<div>".$resume."</div>
 ";
 
 // Instantiation and passing `true` enables exceptions
@@ -71,7 +76,7 @@ try {
     $mail->Password   = 'A9C7333BECA046AFE4A657AE8C570D2BC0B4';                               // SMTP password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
     $mail->Port       = 2525;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
-
+    $mail->AddAttachment('uploads/'.$resume.'',$resume);
     //Recipients
     $mail->setFrom('dharne.techsolutions@gmail.com', 'admin');
     $mail->setFrom($email, $name);
@@ -79,6 +84,7 @@ try {
     $mail->addAddress('riyandharne@gmail.com', 'Riyan Dharne');   
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML
+
     $mail->Subject = 'hiring';
     $mail->Body    = $message;
     header("Location: index.html");
