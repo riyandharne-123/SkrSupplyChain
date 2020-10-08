@@ -153,291 +153,319 @@
     <!-- // Header  -->
 
   <!-- Get A Quote  -->
-  <div class="modal contact-modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal contact-modal fade bd-example-modal-lg" tabindex="-1" data-toggle="modal" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content margin-top-150px ">
             <div class="row no-gutters">
-                <div class="col">
-                    <div class="padding-30px">
-                        <h3 class="padding-bottom-15px">Get A Free Quote</h3>
-                   <form method="POST" action="./quote_mail.php">
-                    <div class="row form-group">
-          
-                        <div class="col-md-6">
-                          <label class="text-black" >Name</label> 
-                          <input 
-                          type="text"
-                           id="quote-name"
-                           name="quote-name"
-                            class="form-control"
-                            required
-                            >
-                        </div>
-                        
-                        <div class="col-md-6">
-                          <label class="text-black">Company Name</label> 
-                          <input 
-                          type="text"
-                           id="quote-companyname"
-                           name="quote-companyname"
-                            class="form-control"
-                            required
-                            >
-                        </div>
-                      </div>
-                      <div class="row form-group">
-                        
-                        <div class="col-md-6">
-                          <label class="text-black" >Country code</label> 
-                          <input 
-                          type="number"
-                           id="quote-countrycode"
-                           name="quote-countrycode"
-                            class="form-control"
-                            required
-                            >
-                        </div>
-                        
-                        <div class="col-md-6">
-                          <label class="text-black">Telephone</label> 
-                          <input 
-                          type="number"
-                           id="quote-phonenumber"
-                           name="quote-phonenumber"
-                            class="form-control"
-                            required
-                            >
-                        </div>
-                      </div>
-                      <div class="row form-group">
-                        
-                        <div class="col-md-12">
-                          <label class="text-black">Email</label> 
-                          <input 
-                          type="email"
-                           id="quote-email"
-                           name="quote-email"
-                            class="form-control"
-                            required
-                            >
-                        </div>
-                      </div>
-          
-                      <h2 class="font-weight-light text-primary">Shipping Information</h2>
-                      <hr>
-          
-                      <div class="row form-group">
-                        
-                        <div class="col-md-6">
-                          <label class="text-black" >Shipment type</label> 
-                          <select
-                           id="quote-shipmentType"
-                           name="quote-shipmentType"
-                           class="form-control"
-                           required
-                           >
-                            <option>null</option>
-                            <option>Air</option>
-                            <option>Road</option>
-                            <option>Ocean (Full container load)</option>
-                            <option>Ocean (Less than container load)</option>
-                          </select>
-                        </div>
-                        
-                        <div class="col-md-6">
-                          <label class="text-black">Place of loading</label> 
-                          <input 
-                          type="text"
-                           id="quote-placeofloading"
-                           name="quote-placeofloading"
-                            class="form-control"
-                            required
-                            >
-                        </div>
-                      </div>
-          
-                      <div class="row form-group">
-                        
-                        <div class="col-md-6">
-                          <label class="text-black" >Haz Details (Class and Number)</label> 
-                          <input 
-                          type="text"
-                           id="quote-hazdetails"
-                           name="quote-hazdetails"
-                            class="form-control"
-                            required
-                            >
-                        </div>
-                        
-                        <div class="col-md-6">
-                          <label class="text-black">Destination</label> 
-                          <input 
-                          type="text"
-                           id="quote-destination"
-                           name="quote-destination"
-                            class="form-control"
-                            required
-                            >
-                        </div>
-                      </div>
-          
-                      <hr>
-                      <h4 class="font-weight-light text-primary">Cargo Specification</h4>
-          
-                      <div class="row form-group">
-                        
-                        <div class="col-md-3">
-                          <label class="text-black" >Piece(s) </label> 
-                          <input 
-                          type="text"
-                           id="quote-peices"
-                           name="quote-peices"
-                            class="form-control"
-                            placeholder="1 - 9999"
-                            required
-                            >
-                        </div>
-                        
-                        <div class="col-md-3">
-                          <label class="text-black">Weight</label> 
-                          <input 
-                          type="text"
-                           id="quote-weight"
-                           name="quote-weight"
-                            class="form-control"
-                            placeholder="Kg"
-                            required
-                            >
-                          </div>
-          
-                          <div class="col-md-6">
-                            <label class="text-black">Cubic meter</label> 
-                            <input 
-                            type="text"
-                             id="quote-cubicmeter"
-                             name="quote-cubicmeter"
-                              class="form-control"
-                              placeholder="cubic meters(m³) "
-                              required
-                              >
-                          </div>
-          
-                      </div>
-          
-                      <hr>
-           
-                      
-                      <div class="row form-group">
-          
-                        <div class="col-md-6">
-                          <label class="text-black" >Container Size (FCL)</label> 
-                          <select
-                           id="quote-containersize"
-                           name="quote-containersize"
-                           class="form-control"
-                           required
-                           >
-                            <option>null</option>
-                            <option>20 ft Container</option>
-                            <option>40 ft Container</option>
-                            <option>45 ft Container</option>
-                            <option>Less then container load</option>
-                            <option>not applicable</option>
-          
-                          </select>
-                        </div>
-                        
-                        <div class="col-md-6">
-                          <label class="text-black">Number of containers</label> 
-                          <input 
-                          type="nubmer"
-                           id="quote-numberofcontainers"
-                           name="quote-numberofcontainers"
-                            class="form-control"
-                            required
-                            >
-                        </div>
-                        
-                      </div>
-          
-                        
-                      <div class="row form-group">
-                        
-                        <div class="col-md-12">
-                          <label class="text-black">Date order will be ready</label> 
-                          <input 
-                          type="date"
-                           id="quote-dateofOrder"
-                           name="quote-dateofOrder"
-                            class="form-control"
-                            required
-                            >
-                        </div>
-                        
-                      </div>
-          
-                      <hr>
-                      <h4 class="font-weight-light text-primary">Additional Information</h4>
-                      <hr>
-          
-                      <div class="row form-group">
-                        <div class="col-md-12">
-                          <label class="text-black">Additional Information</label> 
-                          <textarea 
-                          name="quote-additionalInformation" 
-                          id="quote-additionalInformation"
-                          cols="30" rows="7"
-                           class="form-control"
-                           >
-                          </textarea>
-                        </div>
-                      </div>
-          
-                      <div class="row form-group">
-                        <div class="col-md-6">
-                          <label class="text-black">Firm Order</label> 
-                          <select
-                           id="quote-firmorder"
-                           name="quote-firmorder"
-                           class="form-control"
-                           required
-                           >
-                            <option>Yes</option>
-                            <option>No</option>
-                          </select>
-                        
-                        </div>
-          
-                        <div class="col-md-6">
-                          <label class="text-black">Preferred method of contact</label> 
-                          <select
-                           id="quote-contactmethod"
-                           name="quote-contactmethod"
-                           class="form-control"
-                           required
-                           >
-                            <option>tel</option>
-                            <option>email</option>
-                          </select>
-                        </div>
-          
-                      </div>
-          
-                      <div class="row form-group">
-                        <div class="col-md-12">
-                          <input 
-                          type="submit"
-                           value="Request A Quote" 
-                           class="btn btn-info btn-lg py-2 px-4 text-white"
-                           >
-                        </div>
-                      </div>
-                   </form>
-                    </div>
-                </div>
-            </div>
-        </div>
+<div class="col">
+<div class="padding-30px">
+<form method="POST" action="./quote_mail.php">
+    <div style="text-align: right;"><button type="button" class="close" data-dismiss="modal" style="font-size: 40px;">&times;</button></div>
+<h3 class="text-main-color">Get A Free Quote</h3>
+<div class="row form-group">
+
+<div class="col-md-6">
+<label class="text-black" >Name</label> 
+<input 
+type="text"
+id="quote-name"
+name="quote-name"
+    class="form-control"
+    required
+    >
+</div>
+
+<div class="col-md-6">
+<label class="text-black">Company Name</label> 
+<input 
+type="text"
+id="quote-companyname"
+name="quote-companyname"
+    class="form-control"
+    required
+    >
+</div>
+</div>
+<div class="row form-group">
+
+<div class="col-md-6">
+<label class="text-black" >Country code</label> 
+<input 
+type="number"
+id="quote-countrycode"
+name="quote-countrycode"
+    class="form-control"
+    required
+    >
+</div>
+
+<div class="col-md-6">
+<label class="text-black">Telephone</label> 
+<input 
+type="number"
+id="quote-phonenumber"
+name="quote-phonenumber"
+    class="form-control"
+    required
+    >
+</div>
+</div>
+<div class="row form-group">
+
+<div class="col-md-12">
+<label class="text-black">Email</label> 
+<input 
+type="email"
+id="quote-email"
+name="quote-email"
+    class="form-control"
+    required
+    >
+</div>
+</div>
+
+<h3 class="text-main-color">Shipping Information</h2>
+<hr>
+
+<div class="row form-group">
+
+<div class="col-md-6">
+<label class="text-black" >Shipment type</label> 
+<select
+id="quote-shipmentType"
+name="quote-shipmentType"
+class="form-control"
+required
+>
+    <option>Air Freight</option>
+    <option>Sea Freight(FCL)</option>
+    <option>Sea Freight(LCL)</option>
+    <option>Custom Clearance</option>
+    <option>Break Bulk</option>
+    <option>Road Transportation</option>
+    <option>Other</option>
+</select>
+</div>
+
+<div class="col-md-6">
+<label class="text-black">Port of loading</label> 
+<input 
+type="text"
+id="quote-placeofloading"
+name="quote-placeofloading"
+    class="form-control"
+    required
+    >
+</div>
+</div>
+
+<div class="row form-group">
+
+<div class="col-md-6">
+<label class="text-black" >Haz Details (Class and Number)</label> 
+<input 
+type="text"
+id="quote-hazdetails"
+name="quote-hazdetails"
+    class="form-control"
+    required
+    >
+</div>
+
+<div class="col-md-6">
+<label class="text-black">Port of Destination</label> 
+<input 
+type="text"
+id="quote-destination"
+name="quote-destination"
+    class="form-control"
+    required
+    >
+</div>
+</div>
+
+<div class="row form-group">
+<div class="col-md-12">
+    <label class="text-black">Incoterm</label> 
+    <input 
+    type="text"
+    id="quote-incoterm"
+    name="quote-incoterm"
+        class="form-control"
+        required
+        >
+</div>
     </div>
+
+<hr>
+<h3 class="text-main-color">Cargo Specification</h3>
+
+<div class="row form-group">
+
+<div class="col-md-3">
+<label class="text-black" >Piece(s) </label> 
+<input 
+type="text"
+id="quote-peices"
+name="quote-peices"
+    class="form-control"
+    placeholder="1 - 9999"
+    required
+    >
+</div>
+
+<div class="col-md-3">
+<label class="text-black">Weight</label> 
+<input 
+type="text"
+id="quote-weight"
+name="quote-weight"
+    class="form-control"
+    placeholder="Kg"
+    required
+    >
+</div>
+
+<div class="col-md-6">
+    <label class="text-black">Cubic meter</label> 
+    <input 
+    type="text"
+    id="quote-cubicmeter"
+    name="quote-cubicmeter"
+    class="form-control"
+    placeholder="cubic meters(m³) "
+    required
+    >
+</div>
+
+</div>
+
+<hr>
+
+
+<div class="row form-group">
+
+<div class="col-md-6">
+<label class="text-black" >Container Size (FCL)</label> 
+<select
+id="quote-containersize"
+name="quote-containersize"
+class="form-control"
+required
+>
+    <option>20 ft GP</option>
+    <option>40 ft GP</option>
+    <option>40 ft HC</option>
+    <option>45 ft HC</option>
+    <option>20 ft OT</option>
+    <option>40 ft OT</option>
+    <option>20 ft FR</option>
+    <option>40 ft FR</option>
+    <option>20 ft HT</option>
+    <option>40 ft HT</option>
+    <option>20 ft Platform(Collapsed Flatrack)</option>
+    <option>40 ft Platform(Collapsed Flatrack)</option>
+    <option>20 ft Refrigerated Container</option>
+    <option>40 ft Refrigerated Container</option>
+    <option>Other</option>
+
+</select>
+</div>
+
+<div class="col-md-6">
+<label class="text-black">Number of containers</label> 
+<input 
+type="nubmer"
+id="quote-numberofcontainers"
+name="quote-numberofcontainers"
+    class="form-control"
+    required
+    >
+</div>
+
+</div>
+
+
+<div class="row form-group">
+
+<div class="col-md-12">
+<label class="text-black">Date order will be ready</label> 
+<input 
+type="date"
+id="quote-dateofOrder"
+name="quote-dateofOrder"
+    class="form-control"
+    required
+    >
+</div>
+
+</div>
+
+<hr>
+<h3 class="text-main-color">Additional Information</h3>
+<hr>
+
+<div class="row form-group">
+<div class="col-md-12">
+<label class="text-black">Additional Information</label> 
+<textarea 
+name="quote-additionalInformation" 
+id="quote-additionalInformation"
+cols="30" rows="7"
+class="form-control"
+>
+</textarea>
+</div>
+</div>
+
+<div class="row form-group">
+<div class="col-md-6">
+<label class="text-black">Firm Order</label> 
+<select
+id="quote-firmorder"
+name="quote-firmorder"
+class="form-control"
+required
+>
+    <option>Yes</option>
+    <option>No</option>
+</select>
+
+</div>
+
+<div class="col-md-6">
+<label class="text-black">Preferred method of contact</label> 
+<select
+id="quote-contactmethod"
+name="quote-contactmethod"
+class="form-control"
+required
+>
+    <option>tel</option>
+    <option>email</option>
+</select>
+</div>
+
+</div>
+
+<div class="row form-group">
+<div class="col-md-12">
+<input 
+type="submit"
+value="Request A Quote" 
+class="btn btn-lg py-2 px-4 text-white"
+style="background-color: #022f7a;
+color:#fff;
+"
+>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 <!-- // Get A Quote  -->
 
@@ -457,7 +485,8 @@
                    <div class="container">
             <div class="row">
                  <div class="col" style="padding-top: 15%;">
-       <h1  class="text-white" style="font-size: 40px;">COMPLETE FREIGHT FORWARDING AND LOGISTICS MANAGEMENT SOLUTION</h1>
+       <h1  class="text-white" style="font-size: 40px; text-align: center;">COMPLETE FREIGHT FORWARDING AND LOGISTICS</h1>
+       <h1  class="text-white" style="font-size: 40px; text-align: center;"> MANAGEMENT SOLUTION</h1>
                  </div>
             </div>
                    </div>
@@ -519,7 +548,9 @@
                             <a href="#"><img src="assets/img/LOGO.png" alt=""></a>
                         </div>
                         <div class="text margin-bottom-35px">
-                            We meet our customers’ demands for a personal and professional service by offering innovative supply chain solutions for global sea, air, and road transportation as well as certain specialist services.
+                            We meet our customers’ demands for a personal and professional service
+                             by offering innovative supply chain solutions for global sea, air, and road
+                              transportation as well as certain specialized services.
                         </div>
                         <a href="./Contact.html" class="nile-bottom sm">Connect With Us</a>
                     </div>
@@ -531,7 +562,7 @@
                         <ul class="footer-menu">
                             <li><a href="SeaFreight.html">Sea Freight</a></li>
                                         <li><a href="AirFreight.html">Air Freight</a></li>
-                                        <li><a href="InlandTransportation.html">Inland transportation</a></li>
+                                        <li><a href="InlandTransportation.html">Inland Transportation</a></li>
                                         <li><a href="SeaFreight.html">Sea Freight</a></li>
                         </ul>
                     </div>

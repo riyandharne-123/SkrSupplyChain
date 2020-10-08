@@ -27,6 +27,7 @@ $date_of_order = "";
 $additional_information = "";
 $firm_order = "";
 $method_of_contact = "";
+$incoterm = "";
 $message = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -48,6 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $additional_information = $_POST["quote-additionalInformation"];
     $firm_order = $_POST["quote-firmorder"];
     $method_of_contact = $_POST["quote-contactmethod"];
+    $incoterm = $_POST["quote-incoterm"];
     $message = "
     <table border='1'>
     <tr>
@@ -80,8 +82,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </tr>
     <tr>
       <td>haz details</td>
-      <td>".$place_of_loading."</td> 
+      <td>".$haz_details."</td> 
     </tr>
+    <tr>
+    <td>Incoterm</td>
+    <td>".$incoterm."</td> 
+  </tr>
     <tr>
       <td>Destination</td>
       <td>".$destination."</td> 
