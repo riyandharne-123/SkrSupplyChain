@@ -17,7 +17,7 @@ $message = "";
 $position = "";
 $location = "";
 $resume ="";
-
+$fileloc="";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $name = $_POST["career-name"];
@@ -26,11 +26,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $postion = $_POST["career-position"];
   $location = $_POST["career-location"];
   $message = $_POST["career-message"];
-  $resume = $_POST["career-file"];
-}
+
 
 //file uploading
+$target_dir = "uploads/";
+$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+$uploadOk = 1;
+$fileloc=$target_file;
 
+// Check if $uploadOk is set to 0 by an error
+if ($uploadOk == 0) {
+  echo "Sorry, your file was not uploaded.";
+// if everything is ok, try to upload file
+} else {
+  if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+    echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["tmp_name"])). " has been uploaded.";
+  } else {
+    echo "Sorry, there was an error uploading your file.";
+  }
+}
+//end
+}
 $message = "
 <table border='1'>
 <tr>
@@ -76,7 +92,7 @@ try {
     $mail->Password   = 'A9C7333BECA046AFE4A657AE8C570D2BC0B4';                               // SMTP password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
     $mail->Port       = 2525;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
-    $mail->AddAttachment('uploads/'.$resume.'',$resume);
+    $mail->AddAttachment($fileloc,$_FILES["fileToUpload"]["name"]);
     //Recipients
     $mail->setFrom('dharne.techsolutions@gmail.com', 'admin');
     $mail->setFrom($email, $name);
@@ -87,7 +103,8 @@ try {
 
     $mail->Subject = 'hiring';
     $mail->Body    = $message;
-    header("Location: index.html");
+    
+    header("Location: Careers.html");
     $mail->send();
 
 } catch (Exception $e) {
