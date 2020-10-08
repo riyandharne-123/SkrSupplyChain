@@ -1486,6 +1486,15 @@ a.action-bottom:hover {
   background-color:rgba(0,0,0,0.2);
   opacity: 1;
 }
+.call-action.ba-industry {
+  background-image: url(https://gfh-gmbh.de/images/inhalt/branchen/laser-micro-machining-industries.jpg);
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-color:rgba(0,0,0,0.2);
+  opacity: 1;
+}
 
 .call-action.ba-air {
   background-image: url(https://www.aircargonews.net/wp-content/uploads/pics/Lufthansa-Cargo-1024px.jpg);
@@ -1506,7 +1515,7 @@ a.action-bottom:hover {
   opacity: 1;
 }
 .call-action.ba-pc{
-  background-image: url(https://1.bp.blogspot.com/--vc_enr6TT8/WpESGxrAc0I/AAAAAAAAGgM/DaMBe5DWfss2dCapVAXz5ZkT5mCjb_sFwCLcBGAs/s1600/project-logistics.jpg);
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSFAxUQgUY29cLb8JOgOoCk3A8wQ00SCHyUSQ&usqp=CAU);
   background-position: center center;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -1533,7 +1542,7 @@ a.action-bottom:hover {
   opacity: 1;
 }
 .call-action.ba-cl{
-  background-image: url(https://www.yusen-logistics.com/sites/all/themes/custom/ylk/images/global/img1.jpg);
+  background-image: url(https://www.ups.com/assets/resources/images/knowledge-center/934x495/m10-934x495-hero-main-forward-stocking-locations-can-improve-warehouse-logistics.jpg);
   background-position: center center;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -1543,6 +1552,26 @@ a.action-bottom:hover {
   opacity: 1;
 }
 .call-action.ba-cb{
+  background-image: url(https://www.minervalogistics.in/images/customcomplaionces1.jpg);
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-size: 100% 100%;
+  background-color:rgba(0,0,0,0.2);
+  opacity: 1;
+}
+.call-action.ba-contact{
+  background-image: url(https://www.unnatiunlimited.com/wp-content/uploads/2018/01/Shayona-Banner-Page-Banner-Contact-us.jpg);
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-size: 100% 100%;
+  background-color:rgba(0,0,0,0.2);
+  opacity: 1;
+}
+.call-action.ba-careers{
   background-image: url(https://www.minervalogistics.in/images/customcomplaionces1.jpg);
   background-position: center center;
   background-attachment: fixed;
