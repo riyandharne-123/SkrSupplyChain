@@ -37,13 +37,16 @@ try {
     //Recipients
     $mail->setFrom('dharne.techsolutions@gmail.com', 'admin');
     $mail->setFrom($email, $name);
-    $mail->addAddress('tina@skrsupplychain.com', 'Tina Dharne');     // Add a recipient
+    $mail->addAddress('tina@skrsupplychain.com', 'Tina Dharne');  
+    $mail->addAddress('j.benny@skrsupplychain.com', 'Benny');   
+     $mail->addAddress('rajan.sivakumar@skrsupplychain.com', 'Rajan sivakumar');   
+       // Add a recipient
 
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = $subject;
     $mail->Body    = $message;
-    header("Location: index.html");
+    header("Location: Contact.html");
     $mail->send();
  
 } catch (Exception $e) {
