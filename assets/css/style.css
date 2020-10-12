@@ -1505,6 +1505,17 @@ a.action-bottom:hover {
   background-color:rgba(0,0,0,0.2);
   opacity: 1;
 }
+
+.call-action.ba-locations {
+  background-image: url(https://careers.mondelezinternational.com/~/media/mondelezcareer/com2017/img/our-world/world-map-dark);
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-color:rgba(0,0,0,0.2);
+  opacity: 1;
+}
+
 .call-action.ba-lcl {
   background-image: url(http://www.gatewaycontainer.com/images/yootheme/zoo/business/Container%20stuffing.jpg);
   background-position: center center;
