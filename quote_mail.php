@@ -29,6 +29,7 @@ $firm_order = "";
 $method_of_contact = "";
 $incoterm = "";
 $message = "";
+$cargo_description ="";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $name = $_POST["quote-name"];
@@ -50,6 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $firm_order = $_POST["quote-firmorder"];
     $method_of_contact = $_POST["quote-contactmethod"];
     $incoterm = $_POST["quote-incoterm"];
+    $cargo_description = $_POST["quote-cargodescription"];
     $message = "
     <table border='1'>
     <tr>
@@ -75,6 +77,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <tr>
       <td>Shipment Type</td>
       <td>".$shipment_type."</td> 
+    </tr>
+       <tr>
+      <td>Cargo description</td>
+      <td>".$cargo_description."</td> 
     </tr>
     <tr>
       <td>Place of Loading</td>
