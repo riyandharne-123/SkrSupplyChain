@@ -1525,6 +1525,15 @@ a.action-bottom:hover {
   background-color:rgba(0,0,0,0.2);
   opacity: 1;
 }
+.call-action.ba-ftw {
+  background-image: url(../../demo-img/Free\ Trade\ Warehousing\ Zone.jpg);
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-color:rgba(0,0,0,0.2);
+  opacity: 1;
+}
 .call-action.ba-pc{
   background-image: url(https://breakbulk.news/wp-content/uploads/2020/09/projectlading-800x450-1.jpg);
   background-position: center center;
