@@ -1517,7 +1517,7 @@ a.action-bottom:hover {
 }
 
 .call-action.ba-lcl {
-  background-image: url(http://www.gatewaycontainer.com/images/yootheme/zoo/business/Container%20stuffing.jpg);
+  background-image: url(../../demo-img/lcl4.jpg);
   background-position: center center;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -1526,7 +1526,7 @@ a.action-bottom:hover {
   opacity: 1;
 }
 .call-action.ba-ftw {
-  background-image: url(../../demo-img/Free\ Trade\ Warehousing\ Zone.jpg);
+  background-image: url(../../demo-img/ftwz2.jpg);
   background-position: center center;
   background-attachment: fixed;
   background-repeat: no-repeat;

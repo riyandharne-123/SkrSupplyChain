@@ -46,8 +46,9 @@ try {
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = $subject;
     $mail->Body    = $message;
-    header("Location: Contact.html");
+
     $mail->send();
+    header("Location: Contact.html");
  
 } catch (Exception $e) {
   echo $mail->ErrorInfo;
