@@ -39,7 +39,6 @@ try {
     $mail->setFrom($email, $name);
     $mail->addAddress('tina@skrsupplychain.com', 'Tina Dharne');  
     $mail->addAddress('j.benny@skrsupplychain.com', 'Benny');   
-     $mail->addAddress('rajan.sivakumar@skrsupplychain.com', 'Rajan sivakumar');   
        // Add a recipient
 
     // Content
@@ -47,8 +46,9 @@ try {
     $mail->Subject = $subject;
     $mail->Body    = $message;
 
-    $mail->send();
     header("Location: Contact.html");
+    $mail->send();
+
  
 } catch (Exception $e) {
   echo $mail->ErrorInfo;

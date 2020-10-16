@@ -98,7 +98,6 @@ try {
     $mail->setFrom($email, $name);
     $mail->addAddress('tina@skrsupplychain.com', 'Tina Dharne');  
     $mail->addAddress('j.benny@skrsupplychain.com', 'Benny');   
-     $mail->addAddress('rajan.sivakumar@skrsupplychain.com', 'Rajan sivakumar');   
 
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML
